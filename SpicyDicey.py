@@ -35,6 +35,7 @@ xTest = numpy.expand_dims(xTest,-1)
 yTrain = tf.keras.utils.to_categorical(yTrain,config.CLASSES)
 yTest  = tf.keras.utils.to_categorical(yTest,config.CLASSES)
 
+# It is recommended to double check these hyperparameters by tuning(preferably by using kerastuner)
 model = tf.keras.Sequential([
     tf.keras.layers.InputLayer(input_shape= config.INPUT_SHAPE),
     tf.keras.layers.Conv2D(16,kernel_size=(3,3),activation='relu',padding='same'),
