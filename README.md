@@ -6,7 +6,7 @@ Formerly called DiceMNISt, SpicyDicey is a CNN which predicts the number that ap
 <h3> For creating your own dataset: </h3>
 Each image of a dice is cropped,grayscaled and resized to 28x28 pixel. It is then flipped horizontally,vertically,rotated 90 clockwise,90 counter clockwise and 180 to create a large dataset. The images has a specific nomenclature in order to create datasets easily. If you add your own images, make sure to adjust the "Dataset.py" file accordingly.
 
-<p>Also, feel free to correct if you think anything is wrong.</p>
+<p1>For more detailed overview of the model,read the DiceMNIST paper in the repository.Also, feel free to correct or add anything. (I am very susceptible to mistakes) </p1>
 
 
 <p>TensorBoard for the project : https://tensorboard.dev/experiment/TzCA1ZjpREaEcgx3BVZmGQ/ </p>
