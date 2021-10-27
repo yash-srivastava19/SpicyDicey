@@ -5,9 +5,9 @@ from glob import glob
 train_images,train_image_labels = [],[]
 test_images ,test_image_labels = [],[]
 
-train_list = [glob("Rotated/{}*.JPG".format(i)) for i in range(1,7)]
+train_list = [glob("Train/{}*.JPG".format(i)) for i in range(1,7)]
 
-test_list = [glob("Resized/{}*.JPG".format(i)) for i in range(1,7)]
+test_list = [glob("Test/{}*.JPG".format(i)) for i in range(1,7)]
 
 #Preparing Train Dataset
 for names in train_list:
