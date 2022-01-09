@@ -11,5 +11,5 @@ Each image of a dice is cropped,grayscaled and resized to 28x28 pixel. It is the
 <p1>For more detailed overview of the model,read the DiceMNIST paper in the repository.Also, feel free to correct or add anything. (I am very susceptible to mistakes) </p1>
 
 
--[TensorBoard for the project](https://tensorboard.dev/experiment/TzCA1ZjpREaEcgx3BVZmGQ/)
--[Kaggle Dataset](www.kaggle.com/dataset/9cd0a88268618fdb601af75d668ccebc52ff49cc5f74a1b56256b5e97f574d76)
+* [TensorBoard for the project](https://tensorboard.dev/experiment/TzCA1ZjpREaEcgx3BVZmGQ/)
+* [Kaggle Dataset](www.kaggle.com/dataset/9cd0a88268618fdb601af75d668ccebc52ff49cc5f74a1b56256b5e97f574d76)
