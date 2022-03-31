@@ -6,6 +6,7 @@ import time
 import numpy
 import subprocess
 import tensorflow as tf
+import keras_tuner as kt
 from dataclasses import dataclass
 import tensorflow.keras as keras
 os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
@@ -65,6 +66,16 @@ Save : tf.keras.utils.plot_model(model,to_file = 'model.png',show_dtype = False,
 tBoardCallback = keras.callbacks.TensorBoard(config.LOGS_DIR,histogram_freq = 1, profile_batch = (500,520))
 
 model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
+
+MLambda = lambda x : model
+
+print('[INFO]: ........ Hyperparameter tuning - Keras Tuner ...........')
+
+tuner = kt.BayesianOptimization(MLambda, objective='accuracy', max_trials=5)
+tuner.search(xTrain, yTrain, epochs=5, validation_data=(xTest, yTest))
+model = tuner.get_best_models()[0]
+
+print('[INFO]: ........ Hyperparameter tuning Completed ...........')
 
 print("[INFO]: .......... Starting Model Training ..........")
 model.fit(xTrain,yTrain,batch_size=config.BATCH_SIZE ,epochs=config.EPOCHS,callbacks = [tBoardCallback])

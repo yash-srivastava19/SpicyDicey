@@ -1,0 +1,1 @@
+{"trial_id": "cb15d31ebf13b82a724fa282d8171591", "hyperparameters": {"space": [], "values": {}}, "metrics": {"metrics": {"loss": {"direction": "min", "observations": [{"value": [9.269370079040527], "step": 0}]}, "accuracy": {"direction": "max", "observations": [{"value": [0.42654865980148315], "step": 0}]}}}, "score": 0.42654865980148315, "best_step": 0, "status": "COMPLETED"}
