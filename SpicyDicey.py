@@ -34,7 +34,7 @@ yTest  = tf.keras.utils.to_categorical(yTest,config.CLASSES)
 model = tf.keras.Sequential([
     tf.keras.layers.InputLayer(input_shape= config.INPUT_SHAPE,name = "InputLayer"),
     
-    tf.keras.layers.Conv2D(32,kernel_size=(3,3),activation='relu',padding='same',name = "Conv1),
+    tf.keras.layers.Conv2D(32,kernel_size=(3,3),activation='relu',padding='same',name = "Conv1"),
     tf.keras.layers.MaxPooling2D(padding='same',name = "MaxPool1"),
                            
     tf.keras.layers.Conv2D(32,kernel_size=(3,3),activation='relu',padding='same',name = "Conv2"),
@@ -46,8 +46,8 @@ model = tf.keras.Sequential([
     tf.keras.layers.Flatten(name = "FlatLayer1"),
     tf.keras.layers.Dropout(0.1,name = "Dropout1"),
                            
-    tf.keras.layers.Dense(60,name = "Dense60")                       
-    tf.keras.layers.Dense(config.CLASSES,activation='softmax',name = "Dense6")
+    tf.keras.layers.Dense(60,name = "Dense60"),                       
+    tf.keras.layers.Dense(config.CLASSES,activation='softmax',name = "Dense6"),
 
 ])
 
