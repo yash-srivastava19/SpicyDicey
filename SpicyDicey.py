@@ -60,7 +60,7 @@ model = tf.keras.Sequential([
 ])
 
 Debug: model.summary()
-Save : tf.keras.utils.plot_model('model.png',show_dtype = False, show_shapes = False, show_layer_names = True)
+Save : tf.keras.utils.plot_model(model,to_file = 'model.png',show_dtype = False, show_shapes = False, show_layer_names = True)
     
 tBoardCallback = keras.callbacks.TensorBoard(config.LOGS_DIR,histogram_freq = 1, profile_batch = (500,520))
 
