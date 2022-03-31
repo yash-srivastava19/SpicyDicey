@@ -71,7 +71,7 @@ MLambda = lambda x : model
 
 print('[INFO]: ........ Hyperparameter tuning - Keras Tuner ...........')
 
-tuner = kt.BayesianOptimization(MLambda, objective='accuracy', max_trials=5)
+tuner = kt.RandomSearch(MLambda, objective='accuracy', max_trials=5)
 tuner.search(xTrain, yTrain, epochs=5, validation_data=(xTest, yTest))
 model = tuner.get_best_models()[0]
 
