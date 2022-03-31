@@ -69,11 +69,12 @@ model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accurac
 print("[INFO]: .......... Starting Model Training ..........")
 model.fit(xTrain,yTrain,batch_size=config.BATCH_SIZE ,epochs=config.EPOCHS,callbacks = [tBoardCallback])
 
-print("[INFO]: .......... Evaluating the Model ..........")
-loss,acc = model.evaluate(xTest,yTest)
+# print("[INFO]: .......... Evaluating the Model ..........")
+# numpy.seterr(divide = 'ignore')
+# loss,acc = model.evaluate(xTest,yTest)
 
-Debug: print("Loss:{}  Accuracy:{}".format(loss,acc))
-Save : model.save("DiceMNIST.h5")
+# Debug: print("Loss:{}  Accuracy:{}".format(loss,acc))
+# Save : model.save("DiceMNIST.h5")
 
 
 print("[INFO]: ..............Done with Training. Opening Tensorboard ..................")
